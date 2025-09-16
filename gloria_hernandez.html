@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gloria Hernández - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            light: '#6366F1', // Azul intenso
+                            dark: '#818CF8'   // Azul claro
+                        },
+                        secondary: {
+                            light: '#A855F7', // Morado medio
+                            dark: '#C084FC'   // Morado claro
+                        },
+                        accent: {
+                            light: '#EC4899', // Rosa intenso
+                            dark: '#F472B6'   // Rosa claro
+                        },
+                        darkbg: '#111827',
+                        darkcard: '#1F2937'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .theme-transition * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .contact-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-darkbg theme-transition">
+    <div class="max-w-4xl mx-auto bg-white dark:bg-darkcard rounded-xl shadow-2xl overflow-hidden my-8">
+        <!-- Header -->
+        <header class="bg-gradient-to-r from-purple-700 via-pink-600 to-blue-600 dark:from-purple-900 dark:via-pink-800 dark:to-blue-800 text-white p-8">
+            <div class="flex flex-col md:flex-row justify-between items-center header-content">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <h1 class="text-4xl font-bold">Gloria Angélica Hernández Méndez</h1>
+                    <h2 class="text-xl mt-2 opacity-90">Desarrollador Full Stack</h2>
+                </div>
+                <div class="flex space-x-4">
+                    <button onclick="window.print()" class="px-4 py-2 bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-300 font-semibold rounded-lg flex items-center">
+                        <i class="fas fa-print mr-2"></i> PDF
+                    </button>
+                    <button id="theme-toggle" class="px-4 py-2 bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-300 font-semibold rounded-lg flex items-center">
+                        <i class="fas fa-sun mr-2 hidden dark:inline-block"></i>
+                        <i class="fas fa-moon mr-2 dark:hidden"></i> 
+                        <span class="dark:hidden">Oscuro</span>
+                        <span class="hidden dark:inline">Claro</span>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="https://mail.google.com/mail/u/0/#inbox" class="contact-btn bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-300 px-4 py-2 rounded-lg flex items-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    <span>gloriaangelica488@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/gloria-hernandez-mendez-9739482b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="contact-btn bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-300 px-4 py-2 rounded-lg flex items-center">
+                    <i class="fab fa-linkedin mr-2"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Gloria-hdz-mdz" class="contact-btn bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-300 px-4 py-2 rounded-lg flex items-center">
+                    <i class="fab fa-github mr-2"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="#" class="contact-btn bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-300 px-4 py-2 rounded-lg flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>Monterrey, México</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="p-8 text-gray-700 dark:text-gray-300">
+            <!-- Profile Section -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-semibold text-purple-600 dark:text-purple-400 border-b-2 border-purple-600 dark:border-purple-400 pb-2 mb-4 flex items-center">
+                    <i class="fas fa-user-circle mr-2"></i> Perfil
+                </h2>
+                <p class="text-justify leading-relaxed">
+                    Desarrolladora web frontend y backend, especialista en bases de datos SQL y NoSQL, diseñadora de interfaces con enfoque UX/UI. Experiencia en APIs y microservicios. Capacidad para trabajar en equipos ágiles y comprometida con la calidad del código, las buenas prácticas y la seguridad.
+                </p>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-semibold text-purple-600 dark:text-purple-400 border-b-2 border-purple-600 dark:border-purple-400 pb-2 mb-4 flex items-center">
+                    <i class="fas fa-code mr-2"></i> Habilidades Técnicas
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="card-hover bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-lg font-semibold text-pink-600 dark:text-pink-400 mb-3">Lenguajes de Programación</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>JavaScript</span>
+                                    <span class="text-purple-600 dark:text-purple-400 font-medium">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 h-3 rounded-full overflow-hidden">
+                                    <div class="skill-bar bg-purple-600 dark:bg-purple-400 h-3 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>TypeScript</span>
+                                    <span class="text-purple-600 dark:text-purple-400 font-medium">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 h-3 rounded-full overflow-hidden">
+                                    <div class="skill-bar bg-purple-600 dark:bg-purple-400 h-3 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>SQL</span>
+                                    <span class="text-purple-600 dark:text-purple-400 font-medium">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 h-3 rounded-full overflow-hidden">
+                                    <div class="skill-bar bg-purple-600 dark:bg-purple-400 h-3 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>Kotlin</span>
+                                    <span class="text-purple-600 dark:text-purple-400 font-medium">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 h-3 rounded-full overflow-hidden">
+                                    <div class="skill-bar bg-purple-600 dark:bg-purple-400 h-3 rounded-full" style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-hover bg-gray-50 dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-lg font-semibold text-pink-600 dark:text-pink-400 mb-3">Tecnologías y Herramientas</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>React</span>
+                                    <span class="text-purple-600 dark:text-purple-400 font-medium">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 h-3 rounded-full overflow-hidden">
+                                    <div class="skill-bar bg-purple-600 dark:bg-purple-400 h-3 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>Node.js</span>
+                                    <span class="text-purple-600 dark:text-purple-400 font-medium">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 h-3 rounded-full overflow-hidden">
+                                    <div class="skill-bar bg-purple-600 dark:bg-purple-400 h-3 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span>npm</span>
+                                    <span class="text-purple-600 dark:text-purple-400 font-medium">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 h-3 rounded-full overflow-hidden">
+                                    <div class="skill-bar bg-purple-600 dark:bg-purple-400 h-3 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Competencies Section -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-semibold text-purple-600 dark:text-purple-400 border-b-2 border-purple-600 dark:border-purple-400 pb-2 mb-4 flex items-center">
+                    <i class="fas fa-star mr-2"></i> Competencias
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 p-5 rounded-xl text-center">
+                        <i class="fas fa-laptop-code text-4xl text-purple-600 dark:text-purple-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg mb-1">Desarrollo web</h3>
+                        <p class="text-purple-600 dark:text-purple-400 font-medium">Avanzado</p>
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/30 dark:to-blue-900/30 p-5 rounded-xl text-center">
+                        <i class="fas fa-mobile-alt text-4xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg mb-1">Desarrollo móvil</h3>
+                        <p class="text-blue-600 dark:text-blue-400 font-medium">Intermedio</p>
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-pink-50 to-purple-50 dark:from-pink-900/30 dark:to-purple-900/30 p-5 rounded-xl text-center">
+                        <i class="fas fa-network-wired text-4xl text-pink-600 dark:text-pink-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg mb-1">APIs</h3>
+                        <p class="text-pink-600 dark:text-pink-400 font-medium">Avanzado</p>
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 p-5 rounded-xl text-center">
+                        <i class="fas fa-comments text-4xl text-purple-600 dark:text-purple-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg mb-1">Comunicación</h3> 
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-pink-50 to-blue-50 dark:from-pink-900/30 dark:to-blue-900/30 p-5 rounded-xl text-center">
+                        <i class="fas fa-puzzle-piece text-4xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg mb-1">Resolución de problemas</h3>
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 p-5 rounded-xl text-center">
+                        <i class="fas fa-graduation-cap text-4xl text-pink-600 dark:text-pink-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg mb-1">Aprendizaje continuo</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="mb-10">
+                <h2 class="text-2xl font-semibold text-purple-600 dark:text-purple-400 border-b-2 border-purple-600 dark:border-purple-400 pb-2 mb-4 flex items-center">
+                    <i class="fas fa-graduation-cap mr-2"></i> Educación
+                </h2>
+                <div class="card-hover bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-semibold text-pink-600 dark:text-pink-400">Ingeniería en Desarrollo y Gestión de Software Multiplataforma</h3>
+                    <p class="text-purple-600 dark:text-purple-400 font-medium mt-2">Universidad Tecnológica de Santa Catarina</p>
+                    <div class="flex items-center mt-3">
+                        <i class="far fa-calendar-alt mr-2 text-blue-600 dark:text-blue-400"></i>
+                        <span>2022 – 2026</span>
+                        <i class="fas fa-map-marker-alt ml-4 mr-2 text-blue-600 dark:text-blue-400"></i>
+                        <span>Santa Catarina</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section>
+                <h2 class="text-2xl font-semibold text-purple-600 dark:text-purple-400 border-b-2 border-purple-600 dark:border-purple-400 pb-2 mb-4 flex items-center">
+                    <i class="fas fa-address-card mr-2"></i> Disposición
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 p-5 rounded-xl text-center">
+                        <i class="fas fa-calendar-check text-4xl text-purple-600 dark:text-purple-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg mb-1">Disponibilidad</h3>
+                        <p class="text-purple-600 dark:text-purple-400 font-medium">Inmediata</p>
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-pink-50 to-blue-50 dark:from-pink-900/30 dark:to-blue-900/30 p-5 rounded-xl text-center">
+                        <i class="fas fa-plane-departure text-4xl text-pink-600 dark:text-pink-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg mb-1">Movilidad</h3>
+                        <p class="text-pink-600 dark:text-pink-400 font-medium">Nacional e internacional</p>
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 p-5 rounded-xl text-center">
+                        <i class="fas fa-laptop-house text-4xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                        <h3 class="font-semibold text-lg mb-1">Modalidad</h3>
+                        <p class="text-blue-600 dark:text-blue-400 font-medium">Remoto | Híbrido | Presencial</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 dark:bg-gray-900 text-white text-center p-6">
+            <p>© 2025 Gloria Hernández - Curriculum Vitae</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="https://github.com/Gloria-hdz-mdz" class="hover:text-pink-400 transition-colors duration-300 text-xl"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gloria-hernandez-mendez-9739482b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hover:text-purple-400 transition-colors duration-300 text-xl"><i class="fab fa-linkedin"></i></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox" class="hover:text-blue-400 transition-colors duration-300 text-xl"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="hover:text-pink-400 transition-colors duration-300 text-xl"><i class="fas fa-file-pdf"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Función para animar las barras de habilidades
+        function animateSkills() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 300);
+            });
+        }
+        
+        // Función para cambiar entre temas claro y oscuro
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        // Comprobar la preferencia guardada al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else if (localStorage.getItem('theme') === 'light') {
+                document.documentElement.classList.remove('dark');
+            }
+            
+            // Iniciar animación de habilidades
+            setTimeout(animateSkills, 500);
+            
+            // Añadir evento al botón de cambio de tema
+            document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+        });
+    </script>
+</body>
+</html>
